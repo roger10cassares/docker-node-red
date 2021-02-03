@@ -1,0 +1,21 @@
+version: "3"
+services:
+    node-red:
+        container_name: node-red
+        restart: always
+        build:
+            context: ./build/node-red
+            dockerfile: Dockerfile
+        environment:
+            - NODE_RED_ENABLE_PROJECTS=true
+        volumes:
+            - ./etc/node-red:/data
+        ports:
+            - 1880:1880
+        networks:
+            - node-red-network
+
+
+networks:
+    node-red-network:
+        driver: bridge
