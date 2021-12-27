@@ -4,12 +4,12 @@ services:
         container_name: node-red
         restart: always
         build:
-            context: ./build/node-red
+            context: ./node-red/build
             dockerfile: Dockerfile
         environment:
             - NODE_RED_ENABLE_PROJECTS=true
         volumes:
-            - ./etc/node-red:/data
+            - ./node-red/etc:/data
         ports:
             - 1880:1880
         networks:

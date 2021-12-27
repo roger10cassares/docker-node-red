@@ -1,4 +1,4 @@
-FROM nodered/node-red:1.2.6-12
+FROM nodered/node-red:2.1.4-1-14
 
 MAINTAINER roger10cassares <roger10cassares@gmail.com>
 
